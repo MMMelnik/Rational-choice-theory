@@ -44,11 +44,11 @@ namespace AnalyticHierarchyProcess
                 Environment.Exit(0);
             }
 
-            var optionsVector = GetOptionsVector(Options, _x);
+            var optionsVector = NormalizeVector(GetOptionsVector(Options, _x));
             for (int i=1; i <= 4; i++)
             {
-                
-                Console.WriteLine($"Option {i} has weight of {optionsVector[i-1]}");
+               
+                Console.WriteLine($"Option {i} has weight of { optionsVector[i-1]}");
             }
 
             Console.WriteLine("Options " + (1+Array.IndexOf(optionsVector, optionsVector.Max())) + " топ за свої деньгі!");
