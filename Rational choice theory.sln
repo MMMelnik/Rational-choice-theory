@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticHierarchyProcess", "AnalyticHierarchyProcess\AnalyticHierarchyProcess.csproj", "{DA0F8A2D-1802-4AA8-BC09-680723C434F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalyticHierarchyProcess", "AnalyticHierarchyProcess\AnalyticHierarchyProcess.csproj", "{DA0F8A2D-1802-4AA8-BC09-680723C434F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELECTRE", "ELECTRE\ELECTRE.csproj", "{6E025429-10C9-49C1-AA76-7EC6AA32A235}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MatrixGames", "MatrixGames\MatrixGames.pyproj", "{00C8A82F-C7A4-4123-AA70-CAC80EF58CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,12 @@ Global
 		{DA0F8A2D-1802-4AA8-BC09-680723C434F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA0F8A2D-1802-4AA8-BC09-680723C434F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA0F8A2D-1802-4AA8-BC09-680723C434F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E025429-10C9-49C1-AA76-7EC6AA32A235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E025429-10C9-49C1-AA76-7EC6AA32A235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E025429-10C9-49C1-AA76-7EC6AA32A235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E025429-10C9-49C1-AA76-7EC6AA32A235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C8A82F-C7A4-4123-AA70-CAC80EF58CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C8A82F-C7A4-4123-AA70-CAC80EF58CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
