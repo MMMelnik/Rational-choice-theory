@@ -11,9 +11,9 @@ namespace ExpertDecisionProblem
         static void Main()
         {
             List<List<int>> marks = new List<List<int>>();
-            Console.WriteLine("Завантажити значення з json чи генерація даних випадковим чином?");
-            Console.WriteLine("Rand r");
-            Console.WriteLine("Json j");
+            Console.WriteLine("Завантажити значення з json чи генерація даних випадковим чином?\n " +
+                              "Випадкові дані r \n"+
+                              "Дані з Json j");
             var str = Console.ReadLine();
             if (str == "r")
             {
@@ -36,13 +36,14 @@ namespace ExpertDecisionProblem
                 Random rnd = new Random();
                 for (int i = 0; i < ex; i++)
                 {
+                    // беремо базис
                     marks.Add(basics[rnd.Next(0, basics.Count)]);
                 }
             }
             else
             {
                 if (str == "j")
-                {
+                {   
                     marks = JsonSerializer.Deserialize<List<List<int>>>(File.ReadAllText("marks.json"));
                 }
                 else
@@ -57,13 +58,18 @@ namespace ExpertDecisionProblem
                 PrintSpace();
                 List<int> leaders = GetLeaders(marks);
                 List<int> absolute = GetAbsoluteList(leaders);
+                //  якщо виконується умова, що у нас один абсолютний лідер, то виводимо його індекс
                 Print(leaders.IndexOf(leaders.First()), CheckUnicLeader(absolute) && CheckAbsolute(leaders, absolute),
-                "Absolute");
-                Print(leaders.IndexOf(leaders.First()), CheckUnicLeader(absolute), "Releative");
+                "Абсолютна більшість:");
+                // шукаємо відносну альтернативу
+                //Print(leaders.IndexOf(leaders.First()), CheckUnicLeader(absolute), "Releative");
+                Print(leaders.IndexOf(leaders.First()), CheckUnicLeader(absolute), "Відносна більшість:");
+               
                 List<int> borda = GetBordaList(marks);
-                Print(borda.IndexOf(borda.Max()), CheckUnicBorda(borda), "Borda");
+                Print(borda.IndexOf(borda.Max()), CheckUnicBorda(borda), "Метод Борда");
+               
                 int kondra = GetKondorse(marks);
-                Print(kondra, kondra != -1, "Kondorse");
+                Print(kondra, kondra != -1, "Метод Кондорсе");
                 PrintSpace();
             }
             else
@@ -120,6 +126,7 @@ namespace ExpertDecisionProblem
                 }
                 return true;
             }
+            // перевіряємо чи усі значення ймовірностей в діапазоні від о до 1
             static bool FailProbabilitiesValidCheck(List<decimal> failProbabilities)
             {
                 return failProbabilities.All(d => d >= 0 && d <= 1);
@@ -145,13 +152,14 @@ namespace ExpertDecisionProblem
                 return true;
             }
         }
-        // Calculation
+        // Визначення лідера
+        // записуємо в список номер лідера за оцінками кожного експерту
         static List<int> GetLeaders(List<List<int>> marks)
         {
              var leaders = new List<int>();
-            for (int i = 0; i < marks.Count; i++)
+            foreach (var mark in marks)
             {
-                leaders.Add(marks[i].IndexOf(marks[i].Max()));
+                leaders.Add(mark.IndexOf(mark.Max()));
             }
             return leaders;
         }
@@ -165,17 +173,16 @@ namespace ExpertDecisionProblem
         {
             return leaders.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).First();
         }
+        // перевірка, на наявність одного лідера
         static bool CheckUnicLeader(List<int> absolute)
         {
             if (absolute.Count > 1)
             {
                 return (absolute[0] != absolute[1]);
             }
-            else
-            {
-                return true;
-            }
+            return true;
         }
+        // перевірка на кількість голосів
         static bool CheckAbsolute(List<int> leaders, List<int> absolute)
         {
             if (absolute[0] >= leaders.Count / 2)
@@ -333,7 +340,7 @@ namespace ExpertDecisionProblem
             }
             else
             {
-                Console.WriteLine("{0} : {1}", name, "No way, srry");
+                Console.WriteLine("{0} : {1}", name, "Не можливо встановити");
             }
         }
         static void PrintSpace()
