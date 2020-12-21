@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELECTRE", "ELECTRE\ELECTRE.
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MatrixGames", "MatrixGames\MatrixGames.pyproj", "{00C8A82F-C7A4-4123-AA70-CAC80EF58CE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagnosticTest", "DiagnosticTest\DiagnosticTest.csproj", "{B2B674C2-C6B7-4E91-80D8-EBE64F9871C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiagnosticTest", "DiagnosticTest\DiagnosticTest.csproj", "{B2B674C2-C6B7-4E91-80D8-EBE64F9871C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpertDecisionProblem", "ExpertDecisionProblem\ExpertDecisionProblem.csproj", "{4AC2898D-72E8-4F7A-A825-33BDC087A7AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerspectiveSolver", "PerspectiveSolver\PerspectiveSolver.csproj", "{E909C549-8A23-4C3D-B031-FC0E81093797}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{B2B674C2-C6B7-4E91-80D8-EBE64F9871C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2B674C2-C6B7-4E91-80D8-EBE64F9871C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2B674C2-C6B7-4E91-80D8-EBE64F9871C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC2898D-72E8-4F7A-A825-33BDC087A7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC2898D-72E8-4F7A-A825-33BDC087A7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC2898D-72E8-4F7A-A825-33BDC087A7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC2898D-72E8-4F7A-A825-33BDC087A7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E909C549-8A23-4C3D-B031-FC0E81093797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E909C549-8A23-4C3D-B031-FC0E81093797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E909C549-8A23-4C3D-B031-FC0E81093797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E909C549-8A23-4C3D-B031-FC0E81093797}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

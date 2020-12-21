@@ -28,7 +28,7 @@ namespace DiagnosticTest
 
         private static void GetPositiveLoss()
         {
-            Console.Write("Введіть втрату для хибно негативного результату L2: ");
+            Console.Write("Введіть втрату для хибно позитивного результату L2: ");
             Console.Write("\n");
             _l2 = double.Parse(Console.ReadLine() ?? "1.0");
         }

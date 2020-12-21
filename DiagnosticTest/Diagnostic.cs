@@ -8,7 +8,7 @@ namespace DiagnosticTest
         private double SE, SP, w, P, lowerLimit, higherLimit;
         private bool qualitative;
 
-        public Diagnostic(double tp = 467.0, double fp=107.0, double fn=95.0, double tn=3468.0, double l12=100.0, double l21 = 5.0 )
+        public Diagnostic(double tp = 467.0, double fp=107.0, double fn=95.0, double tn=3468.0, double l12=100.0, double l21 = 50.0 )
         {
             TP = tp;
             FP = fp;
